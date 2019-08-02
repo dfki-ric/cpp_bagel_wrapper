@@ -1,0 +1,14 @@
+<package>
+  <description brief="This library wraps the bagel graphs into a cpp library.">
+  This library wraps the bagel graphs into a cpp library.
+  </description>
+  <author>Malte Langosz/malte.langosz@dfki.de</author>
+  <license></license>
+  <url>http://</url>
+  <logo>http://</logo>
+  <depend package="simulation/lib_manager" />
+  <depend package="bagel/c_bagel" />
+  <depend package="tools/configmaps" />
+  <depend package="simulation/mars/common/utils" />
+  <tags>needs_opt</tags>
+</package>

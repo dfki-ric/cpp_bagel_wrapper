@@ -1,0 +1,301 @@
+model: bagel
+nodes:
+  - name: INPUT1
+    type: INPUT
+    outputs:
+      - name: out1
+    id: 1
+    order: 1
+    pos:
+      x: 874
+      y: 689
+  - name: INPUT2
+    type: INPUT
+    outputs:
+      - name: out1
+    id: 2
+    order: 2
+    pos:
+      x: 865
+      y: 653
+  - name: INPUT3
+    type: INPUT
+    outputs:
+      - name: out1
+    id: 3
+    order: 3
+    pos:
+      x: 859
+      y: 613
+  - name: INPUT4
+    type: INPUT
+    outputs:
+      - name: out1
+    id: 4
+    order: 4
+    pos:
+      x: 854
+      y: 572
+  - name: OUTPUT1
+    type: OUTPUT
+    inputs:
+      - name: in1
+        bias: 0
+        default: 0
+        type: SUM
+    id: 5
+    order: 5
+    pos:
+      x: 1052
+      y: 696
+  - name: OUTPUT2
+    type: OUTPUT
+    inputs:
+      - name: in1
+        bias: 0
+        default: 0
+        type: SUM
+    id: 6
+    order: 6
+    pos:
+      x: 1067
+      y: 651
+  - name: OUTPUT3
+    type: OUTPUT
+    inputs:
+      - name: in1
+        bias: 0
+        default: 0
+        type: SUM
+    id: 7
+    order: 7
+    pos:
+      x: 1071
+      y: 610
+  - name: OUTPUT4
+    type: OUTPUT
+    inputs:
+      - name: in1
+        bias: 0
+        default: 0
+        type: SUM
+    id: 8
+    order: 8
+    pos:
+      x: 1075
+      y: 570
+  - name: PIPE1
+    type: PIPE
+    inputs:
+      - name: in1
+        idx: 0
+        bias: 0
+        default: 0
+        type: SUM
+        fold:
+          state: 0
+          num: 0
+    outputs:
+      - name: out1
+        fold:
+          state: 0
+    id: 9
+    order: 9
+    pos:
+      x: 965
+      y: 653
+  - name: ABS1
+    type: ABS
+    inputs:
+      - name: in1
+        idx: 0
+        bias: 0
+        default: 0
+        type: SUM
+        fold:
+          state: 0
+          num: 0
+    outputs:
+      - name: out1
+        fold:
+          state: 0
+    id: 10
+    order: 10
+    pos:
+      x: 967
+      y: 609
+edges:
+  - vertices:
+      - x: 947
+        y: 682
+        z: 0
+      - x: 1048
+        y: 689
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 947
+        y: 682
+        z: 0
+      - x: 972
+        y: 682
+        z: 0
+      - x: 1023
+        y: 689
+        z: 0
+      - x: 1048
+        y: 689
+        z: 0
+    decouple: false
+    toNode: OUTPUT1
+    toNodeInput: in1
+    fromNode: INPUT1
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 1
+  - vertices:
+      - x: 943
+        y: 646
+        z: 0
+      - x: 961
+        y: 633
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 943
+        y: 646
+        z: 0
+      - x: 968
+        y: 646
+        z: 0
+      - x: 936
+        y: 633
+        z: 0
+      - x: 961
+        y: 633
+        z: 0
+    decouple: false
+    toNode: PIPE1
+    toNodeInput: in1
+    fromNode: INPUT2
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 5
+  - vertices:
+      - x: 1047
+        y: 633
+        z: 0
+      - x: 1063
+        y: 644
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 1047
+        y: 633
+        z: 0
+      - x: 1072
+        y: 633
+        z: 0
+      - x: 1038
+        y: 644
+        z: 0
+      - x: 1063
+        y: 644
+        z: 0
+    decouple: false
+    toNode: OUTPUT2
+    toNodeInput: in1
+    fromNode: PIPE1
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 6
+  - vertices:
+      - x: 936
+        y: 606
+        z: 0
+      - x: 963
+        y: 589
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 936
+        y: 606
+        z: 0
+      - x: 961
+        y: 606
+        z: 0
+      - x: 938
+        y: 589
+        z: 0
+      - x: 963
+        y: 589
+        z: 0
+    decouple: false
+    toNode: ABS1
+    toNodeInput: in1
+    fromNode: INPUT3
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 7
+  - vertices:
+      - x: 1046
+        y: 589
+        z: 0
+      - x: 1067
+        y: 603
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 1046
+        y: 589
+        z: 0
+      - x: 1071
+        y: 589
+        z: 0
+      - x: 1042
+        y: 603
+        z: 0
+      - x: 1067
+        y: 603
+        z: 0
+    decouple: false
+    toNode: OUTPUT3
+    toNodeInput: in1
+    fromNode: ABS1
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 8
+  - vertices:
+      - x: 932
+        y: 565
+        z: 0
+      - x: 1071
+        y: 563
+        z: 0
+    smooth: true
+    weight: 1
+    decoupleVertices:
+      - x: 932
+        y: 565
+        z: 0
+      - x: 957
+        y: 565
+        z: 0
+      - x: 1046
+        y: 563
+        z: 0
+      - x: 1071
+        y: 563
+        z: 0
+    decouple: false
+    toNode: OUTPUT4
+    toNodeInput: in1
+    fromNode: INPUT4
+    fromNodeOutput: out1
+    ignore_for_sort: 0
+    id: 9
