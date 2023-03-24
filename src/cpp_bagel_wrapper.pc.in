@@ -6,7 +6,7 @@ includedir=${prefix}/include
 Name: @PROJECT_NAME@
 Description: @PROJECT_DESCRIPTION@
 Version: @PROJECT_VERSION@
-Requires: @PKGCONFIG_REQUIRES@
-Libs: -L${libdir} -l@PROJECT_NAME@ @PKGCONFIG_LIBS@
-Cflags: -I${includedir} @PKGCONFIG_CFLAGS@
+Requires: mars_utils c_bagel configmaps
+Libs: -L${libdir} -l@PROJECT_NAME@
+Cflags: -I${includedir}
 
